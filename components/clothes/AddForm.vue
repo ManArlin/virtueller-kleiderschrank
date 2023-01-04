@@ -61,7 +61,7 @@ interface ICloth {
     size: Size;
     color: string;
     rating: number;
-    categories: string[]; 
+    categories: string[];
 }
 
 let form: ICloth = {
