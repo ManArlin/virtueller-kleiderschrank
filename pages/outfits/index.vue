@@ -3,9 +3,11 @@
 </template>
 
 <script setup lang="ts">
-
+definePageMeta({
+    layout:'overview',
+});
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 
 </style>
