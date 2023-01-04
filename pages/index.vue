@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-
+        <h1>Willkommen bei deinem revolitionären virtuellen Kleiderschrank.</h1>
     </div>
 </template>
 
@@ -8,6 +8,6 @@
 
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 
 </style>

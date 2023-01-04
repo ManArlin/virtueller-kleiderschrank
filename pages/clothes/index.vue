@@ -1,5 +1,5 @@
 <template>
-    
+    <ClothesAddForm></ClothesAddForm>
 </template>
 
 <script setup lang="ts">
