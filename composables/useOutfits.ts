@@ -18,7 +18,11 @@ export default function useOutfits() {
         console.log("Outfits: ", outfits.value)
     }
 
+    function getOutfitById(id: number) {
+        return outfits.value.find(outfit => outfit.id === id);
+    }
+
     return {
-        outfits, addOutfit
+        outfits, addOutfit, getOutfitById
     }
 }

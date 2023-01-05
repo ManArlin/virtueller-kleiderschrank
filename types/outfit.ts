@@ -4,7 +4,7 @@ export interface IOutfit {
     id: number;
     name: string;
     clothes: ICloth[];
-    rating: number;
+    rating: string;
     occasion: string[]; //Anlass
 }
 

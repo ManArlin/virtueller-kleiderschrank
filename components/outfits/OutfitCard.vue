@@ -6,7 +6,9 @@
         <b-card-text>
             Kleidungsstücke:
             <b-card-group v-for="cloth in outfit.clothes">
+                <NuxtLink class="router-link" :to="`/clothes/${cloth.id}`">
                 <ClothesClothCard :cloth="cloth" :show-details="false" :show-footer="false"></ClothesClothCard>
+                </NuxtLink>
             </b-card-group>
         </b-card-text>
       

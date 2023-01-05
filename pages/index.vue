@@ -1,7 +1,7 @@
 <template>
-    <div class="container">
+    <b-container >
         <h1>Willkommen bei deinem revolitionären virtuellen Kleiderschrank.</h1>
-    </div>
+    </b-container>
 </template>
 
 <script setup lang="ts">

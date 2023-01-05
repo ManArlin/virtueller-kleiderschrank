@@ -11,7 +11,7 @@
 
 
             <b-form class="d-flex">
-                    <b-form-input id="input-search" v-model="inputSearch" placeholder="Search" aria-label="Search"></b-form-input>
+                    <b-form-input id="input-search" v-model="searchInput" placeholder="Search" aria-label="Search"></b-form-input>
             </b-form>
 
             <ul class="nav col-12 col-md-auto justify-content-center">
@@ -28,20 +28,15 @@
             </ul>
 
     </header>
-    <slot/>
+    <slot></slot>
     </div>
 </template>
 
 <script setup lang="ts">
-let inputSearch = ref("");
-
-watch(inputSearch, (newInput, oldInput) => {
-    console.log(newInput);
-    console.log(oldInput)
-})
+const {searchInput} = useSearch();
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
     .router-link {
         text-decoration: none;
         color: black;
