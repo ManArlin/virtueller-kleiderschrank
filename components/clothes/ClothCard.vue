@@ -1,27 +1,25 @@
 <template>
     <div>
-        <b-card
+        <b-card v-if="cloth"
         border-variant="secondary"
-        header="Secondary"
-        header-border-variant="secondary"
-        :title="title"
-        :sub-title="subTitle"
+        :title="cloth.name"
+        :subtitle="cloth.categories.toString()"
         align="center">
         <b-card-text>
             Some quick example text to build on the <em>card title</em> and make up the bulk of the card's
             content.
-    </b-card-text>
+        </b-card-text>
         </b-card>
         
     </div>
 </template>
 
 <script setup lang="ts">
-import { stringLiteral } from '@babel/types';
+import { PropType } from 'vue'
+import { ICloth } from '~~/types/cloth';
 
 const props = defineProps({
-    title: String,
-    subTitle: String,
+    cloth: Object as PropType<ICloth>
 })
 
 </script>

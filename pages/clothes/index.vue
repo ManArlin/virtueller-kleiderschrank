@@ -1,12 +1,12 @@
 <template>
   <div>
-    <b-card-group deck>
-      <ClothesClothCard :title="title" :subTitle="subTitle">
-
-      </ClothesClothCard>
-      <ClothesClothCard :title="title" :subTitle="subTitle"></ClothesClothCard>
-      <ClothesClothCard :title="title" :subTitle="subTitle"></ClothesClothCard>
-    </b-card-group>
+    <div container>
+      <b-row cols="1" cols-sm="2" cols-md="3" cols-lg="4">
+        <b-col v-for="cloth in clothes">
+          <ClothesClothCard class="mb-2" :cloth="cloth"></ClothesClothCard>
+        </b-col>
+      </b-row>
+    </div>
 
     <b-button variant="outline-success" @click="toggleAddForm = !toggleAddForm">Neues Kleidungsstueck</b-button>
     <ClothesAddForm v-if="toggleAddForm"></ClothesAddForm>
@@ -19,6 +19,8 @@
 definePageMeta({
     layout:'overview',
 });
+
+const {clothes} = useClothes()
 
 let toggleAddForm = ref(false);
 
