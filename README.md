@@ -1,6 +1,12 @@
-# Nuxt 3 Minimal Starter
+# Virtueller Kleiderschrank
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Erstellen von Outfits fürs schnelle Finden eine neuen Outfits für den Tag.
+
+Kleines Prjekt, welches einem ermöglicht Kleidungsstücke hinzuzufügen, zu ändern und zu löschen. Zusätzlich lassen sich Outfits erstellen, bei denen Kleidungsstücke verlinkt werden können. Outfits lassen sich ebenfalls im Nachhinein anpassen und löschen.
+
+In der jeweiligen Overview Seite der Kleidungsstücke und der Outfits befindet sich im Header eine Searchbar, mit der man die Liste filtern kann.
+
+Zusätzlich lassen sich die einzelnen Cards anklicken, wodurch man zu Detailseite der einzelnen Kleidungsstücke/Outfits gelangt.
 
 ## Setup
 
