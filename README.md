@@ -1,6 +1,6 @@
 # Virtueller Kleiderschrank
 
-Erstellen von Outfits fürs schnelle Finden eine neuen Outfits für den Tag.
+Erstellen von Outfits fürs schnelle Finden eines neuen Outfits für den Tag.
 
 Kleines Prjekt, welches einem ermöglicht Kleidungsstücke hinzuzufügen, zu ändern und zu löschen. Zusätzlich lassen sich Outfits erstellen, bei denen Kleidungsstücke verlinkt werden können. Outfits lassen sich ebenfalls im Nachhinein anpassen und löschen.
 
