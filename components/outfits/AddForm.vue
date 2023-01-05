@@ -24,6 +24,8 @@ import {INewOutfit } from "~/types/outfit"
 
 const {addOutfit} = useOutfits()
 
+const emit = defineEmits(['closeAddForm'])
+
 //Variables passed to Components to define the Output String
 const clothesListName = "Kleidungsstuecke"
 const occasionListName = "Anlass"
@@ -40,6 +42,7 @@ const form = reactive<INewOutfit>({
 //Adds the new Outfit to the outfit list
 function formSubmit(event: Event) {
     addOutfit(toRaw(form))
+    emit('closeAddForm')
 }
 
 //Resets all form values

@@ -2,7 +2,7 @@
     <b-container >
       <!--AddForm-->
       <b-button variant="outline-success" @click="toggleAddForm = !toggleAddForm">Neues Outfit</b-button>
-      <OutfitsAddForm v-if="toggleAddForm"></OutfitsAddForm>
+      <OutfitsAddForm v-if="toggleAddForm" @close-add-form="toggleAddForm = false"></OutfitsAddForm>
 
       <!--Lists all Outfits-->
       <b-row cols="1" cols-sm="2" cols-md="3" cols-lg="4">

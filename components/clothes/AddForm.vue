@@ -31,9 +31,11 @@
 </template>
 
 <script setup lang="ts">
+import { emit } from "process";
 import {Size, INewCloth} from "~/types/cloth"
-const {clothes, addCloth} = useClothes()
+const {addCloth} = useClothes()
 
+const emit = defineEmits(['closeAddForm'])
 //Variable passed to the FormItemsListField Component to define the Output String
 const listName: string ="Kategorie"
 
@@ -48,6 +50,7 @@ const form = reactive<INewCloth>({
 //Adds the new Cloth to the cloth list
 function formSubmit(event: Event) {
     addCloth(toRaw(form))
+    emit('closeAddForm')
 }
 
 //Resets all form values
