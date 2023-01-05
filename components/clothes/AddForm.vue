@@ -1,6 +1,6 @@
 <template>
     <b-container>
-        <b-form @submit="addCloth" @reset="formReset">
+        <b-form @submit="formSubmit" @reset="formReset">
 
             <!--Name Field-->
             <FormNameField v-model:name="form.name"></FormNameField>   
@@ -32,8 +32,9 @@
 
 <script setup lang="ts">
 import {Size, INewCloth} from "~/types/cloth"
-const {clothes, addClothes} = useClothes()
+const {clothes, addCloth} = useClothes()
 
+//Variable passed to the FormItemsListField Component to define the Output String
 const listName: string ="Kategorie"
 
 const form = reactive<INewCloth>({
@@ -41,16 +42,17 @@ const form = reactive<INewCloth>({
     size: Size.M,
     color: "",
     rating: "0",
-    categories: ([])
+    categories: []
 })
 
-function addCloth(event: Event) {
-    addClothes(toRaw(form))
+//Adds the new Cloth to the cloth list
+function formSubmit(event: Event) {
+    addCloth(toRaw(form))
 }
 
+//Resets all form values
 function formReset(event: Event) {
     event.preventDefault()
-    // Reset our form values
     form.name= "",
     form.size= Size.M,
     form.color= "",
@@ -66,7 +68,6 @@ const sizeOptions = [
     { value: Size.XL, text: "XL" },
     { value: Size.XL, text: "XXL" }
 ]
-
 </script>
 
 <style lang="scss">

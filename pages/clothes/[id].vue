@@ -1,3 +1,5 @@
+<!--Detaislpage for Clothes-->
+
 <template>
        <b-container v-if="cloth">
               <h1 class="text-center">{{cloth.name}}</h1>
@@ -22,7 +24,17 @@ const categoriesListName = "Kategorie"
 const { getClothById } = useClothes()
 const {id} = useRoute().params
 
-const cloth = getClothById(parseInt(id.toString()))
+const clothId = parseInt(id.toString())
+
+if(isNaN(clothId)) {
+       throw createError({statusCode: 404, statusMessage: 'ID ungueltig'})
+}
+
+const cloth = getClothById(clothId)
+
+if(!cloth) {
+       throw createError({statusCode: 404, statusMessage: 'Kleidungsstück nicht gefunden'})
+}
 
 </script>
 

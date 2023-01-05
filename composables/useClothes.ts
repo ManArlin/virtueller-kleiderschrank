@@ -1,11 +1,11 @@
 import { Size, ICloth, INewCloth} from "~/types/cloth"
 
-let id = 2;
+let id = 0;
 
 export default function useClothes() {
     const clothes = useState<ICloth[]>('clothes', () => [
         { 
-            id: 0, 
+            id: id++, 
             name: "Pullover mit schwarzem Muster", 
             size: Size.L, 
             color: "weiß/schwarz",
@@ -13,17 +13,18 @@ export default function useClothes() {
             categories: [ "Winter", "cozy" ]
         },
         { 
-            id: 1, 
+            id: id++, 
             name: "Jeanshose", 
             size: Size.XL, 
             color: "blau",
             rating: "6", 
-            categories: [ "lockerer", "verwaschen" ]
+            categories: [ "locker", "verwaschen" ]
         }
     ])
 
-    function addClothes(newCloth: INewCloth) {
-        //Create new Cloth Object with unique id and add to the list
+
+    //Creates a new Cloth Object with an unique id and adds it to the list
+    function addCloth(newCloth: INewCloth) {
         const cloth: ICloth = {
             id: ++id,
             name: newCloth.name,
@@ -41,6 +42,6 @@ export default function useClothes() {
     }
 
     return {
-        clothes, addClothes, getClothById
+        clothes, addCloth, getClothById
     }
 }

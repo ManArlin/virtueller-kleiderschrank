@@ -1,6 +1,5 @@
 <template>
     <div>
-        <!--Item List Field-->
         <b-form-group id="input-group-item-list" :label="`${listName}:`" label-for="input-item-list">
             <b-list-group horizontal class="mb-2">
                 <b-list-group-item variant="warning" v-for="item in list">{{item}}</b-list-group-item>
@@ -25,22 +24,14 @@ const {list, listName} = defineProps({
     listName: {type: String, required: true},
     list: {type: Object as PropType<String[]>, required: true}
 })
-const test ="Test"
-console.log(listName);
-console.log(list);
-
 
 const newItem = ref("")
 
+//adds the newItem to the list
 function addItem() {
     if(newItem.value.length > 0) {
         list.push(newItem.value)
         newItem.value = ""
     }
 }
-
 </script>
-
-<style lang="scss" scoped>
-
-</style>

@@ -1,7 +1,6 @@
 <template>
     <div>
-    <b-card v-if="cloth"
-    border-variant="secondary" :title="cloth.name"
+    <b-card v-if="cloth" border-variant="secondary" :title="cloth.name"
     :subtitle="cloth.categories.toString()" footer-tag="footer" align="center">
         <div v-if="showDetails">
             <b-card-text>
@@ -22,14 +21,10 @@
 import { PropType } from 'vue'
 import { ICloth } from '~~/types/cloth';
 
-const props = defineProps({
+//showDetails and showFooter to determine if detailed information should be displayed
+const {cloth, showDetails, showFooter} = defineProps({
     cloth: Object as PropType<ICloth>,
     showDetails: Boolean,
     showFooter: Boolean
 })
-
 </script>
-
-<style lang="scss" scoped>
-
-</style>

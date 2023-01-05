@@ -1,3 +1,5 @@
+<!--Detailspage of Outfits-->
+
 <template>
        <b-container v-if="outfit">
               <h1 class="text-center">{{outfit.name}}</h1>
@@ -20,10 +22,21 @@ const { getOutfitById } = useOutfits()
 const {id} = useRoute().params
 
 const clothesListName = "Kleidungsstücke"
-
 const occasionListName = "Anlass"
 
-const outfit = getOutfitById(parseInt(id.toString()))
+const outfitId = parseInt(id.toString())
+
+if(isNaN(outfitId)) {
+       throw createError({statusCode: 404, statusMessage: 'ID ungueltig'})
+}
+
+const outfit = getOutfitById(outfitId)
+
+if(!outfit) {
+       throw createError({statusCode: 404, statusMessage: 'Outfit nicht gefunden'})
+}
+
+
 </script>
 
 <style scoped lang="scss">

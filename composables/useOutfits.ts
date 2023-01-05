@@ -5,8 +5,9 @@ let id = 0;
 export default function useOutfits() {
     const outfits = useState<IOutfit[]>('outfits', () => [])
 
+
+    //Creates a new Outfit Object with an unique id and adds it to the list
     function addOutfit(newOutfit: INewOutfit) {
-        //Create new outfit Object with unique id and add to the list
         const outfit: IOutfit = {
             id: ++id,
             name: newOutfit.name,

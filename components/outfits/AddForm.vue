@@ -22,11 +22,13 @@
 <script setup lang="ts">
 import {INewOutfit } from "~/types/outfit"
 
-const {outfits, addOutfit} = useOutfits()
+const {addOutfit} = useOutfits()
 
+//Variables passed to Components to define the Output String
 const clothesListName = "Kleidungsstuecke"
-
 const occasionListName = "Anlass"
+
+const newOccasion= ref("")
 
 const form = reactive<INewOutfit>({
     name: "",
@@ -34,32 +36,21 @@ const form = reactive<INewOutfit>({
     rating: "0",
     occasion: []
 })
-const newOccasion= ref("")
 
-
-function addOccasion() {
-    if(newOccasion.value.trim().length <= 0) {
-        //Text field ist empty, dont add a new empty Categorie
-        return
-    }
-    form.occasion.push(newOccasion.value)
-    newOccasion.value = ""
-}
-
+//Adds the new Outfit to the outfit list
 function formSubmit(event: Event) {
     addOutfit(toRaw(form))
 }
 
+//Resets all form values
 function formReset(event: Event) {
     event.preventDefault()
-    // Reset our form values
     form.name= ""
     form.clothes= []
     form.rating= "0"
     form.occasion= []
     newOccasion.value = ""
 }
-
 </script>
 
 <style lang="scss">

@@ -45,8 +45,4 @@ function unselectItem(item: ICloth) {
     console.log(item)
     console.log(list)
 }
-
 </script>
-
-<style lang="scss" scoped> 
-</style>

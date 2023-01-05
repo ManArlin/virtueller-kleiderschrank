@@ -5,12 +5,12 @@
             <div class="mt-2">Bewertung: {{ rating }}</div>
         </b-form-group>
     </div>
-    </template>
+</template>
     
-    <script setup lang="ts">
-    const {rating} = defineProps({
-        rating: {type: String, required: true}
-    })
-    
-    defineEmits(['update:rating'])
-    </script>
+<script setup lang="ts">
+const {rating} = defineProps({
+    rating: {type: String, required: true}
+})
+
+defineEmits(['update:rating'])
+</script>
