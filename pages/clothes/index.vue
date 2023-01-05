@@ -3,7 +3,7 @@
     <div container>
       <b-row cols="1" cols-sm="2" cols-md="3" cols-lg="4">
         <b-col v-for="cloth in clothes">
-          <ClothesClothCard class="mb-2" :cloth="cloth"></ClothesClothCard>
+          <ClothesClothCard class="mb-2" :cloth="cloth" :show-details="true" :show-footer="true"></ClothesClothCard>
         </b-col>
       </b-row>
     </div>

@@ -20,7 +20,7 @@ export interface INewCloth {
     name: string;
     size: Size;
     color: string;
-    rating: number;
+    rating: string;
     categories: string[];
 }
 
