@@ -13,7 +13,7 @@
             <!--Occasion Field-->
             <FormItemsListField :list="form.occasion" :list-name="occasionListName"></FormItemsListField>
 
-            <b-button type="submit" variant="primary">Hinzufuegen</b-button>
+            <b-button class="mx-1" type="submit" variant="primary">Hinzufuegen</b-button>
             <b-button type="reset" variant="danger">Zuruecksetzen</b-button>
         </b-form>
     </b-container>

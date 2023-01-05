@@ -2,23 +2,20 @@
     <div>
     <header class="border-bottom d-flex py-3 mb-4 justify-content-between">
             <NuxtLink class="router-link brand" to="/">
-                <div class="brand">
+                <div class="brand text">
                     <img src="/images/formal-shirt-icon.svg" alt="" width="60" height="44"/>
                     <p>Virtueller Kleiderschrank</p>
                 </div>
             </NuxtLink>
-            <ul class="nav col-12 col-md-auto justify-content-center">
-                <li>
+            <b-container></b-container>
+            <b-container class="side-links">
                 <NuxtLink class="router-link mx-2" to="/clothes">
                     Kleidungsstuecke
                 </NuxtLink>
-                </li>
-                <li>
                 <NuxtLink class="router-link mx-2" to="/outfits">
                     Outfits
                 </NuxtLink>
-                </li>
-            </ul>
+            </b-container>
     </header>
     <slot/>
     </div>
@@ -32,6 +29,11 @@
 
     li {
         margin: auto;
+    }
+
+    .side-links {
+        margin: auto;
+        max-width: 250px;
     }
 
     .brand {

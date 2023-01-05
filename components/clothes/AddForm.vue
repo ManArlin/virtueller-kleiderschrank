@@ -23,7 +23,7 @@
             <!--Categorie Field-->
             <FormItemsListField :list="form.categories" :list-name="listName"></FormItemsListField>
 
-            <b-button type="submit" variant="primary">Hinzufuegen</b-button>
+            <b-button class="mx-1" type="submit" variant="primary">Hinzufuegen</b-button>
             <b-button type="reset" variant="danger">Zuruecksetzen</b-button>
 
         </b-form>
