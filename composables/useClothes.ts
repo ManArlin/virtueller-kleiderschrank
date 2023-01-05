@@ -37,11 +37,20 @@ export default function useClothes() {
         console.log("clothes: ", clothes.value)
     }
 
+    //Returns the Cloth to the passed id
     function getClothById(id: number) {
-        return clothes.value.find(cloth => cloth.id === id);
+        return clothes.value.find(cloth => cloth.id === id)
+    }
+
+    //Deletes the passed Cloth from the list
+    function deleteCloth(cloth: ICloth) {
+        const index = clothes.value.indexOf(cloth, 0)
+        if (index > -1) {
+            clothes.value.splice(index, 1)
+        }
     }
 
     return {
-        clothes, addCloth, getClothById
+        clothes, addCloth, getClothById, deleteCloth
     }
 }

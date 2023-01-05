@@ -19,11 +19,20 @@ export default function useOutfits() {
         console.log("Outfits: ", outfits.value)
     }
 
+    //Returns the Outfit to the passed id
     function getOutfitById(id: number) {
-        return outfits.value.find(outfit => outfit.id === id);
+        return outfits.value.find(outfit => outfit.id === id)
+    }
+
+    //Deletes the passed Outfit from the list
+    function deleteOutfit(outfit: IOutfit) {
+        const index = outfits.value.indexOf(outfit, 0)
+        if(index > -1) {
+            outfits.value.splice(index, 1)
+        }
     }
 
     return {
-        outfits, addOutfit, getOutfitById
+        outfits, addOutfit, getOutfitById, deleteOutfit
     }
 }

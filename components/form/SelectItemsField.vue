@@ -34,7 +34,6 @@ const unselectedItems = computed(() => clothes.value.filter(cloth => !list.inclu
 
 function selectItem(item: ICloth) {
     list.push(item)
-    console.log(item)
 }
 
 function unselectItem(item: ICloth) {
@@ -42,7 +41,5 @@ function unselectItem(item: ICloth) {
     if (index > -1) {
         list.splice(index, 1)
     }
-    console.log(item)
-    console.log(list)
 }
 </script>
