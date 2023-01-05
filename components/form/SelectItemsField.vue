@@ -3,13 +3,13 @@
         <!--Item List Field-->
         <b-form-group id="input-group-item-list" :label="`${listName}:`" label-for="input-item-list">
             <p>
-                Selected:
+                Hinzugefügt:
             </p>
             <b-list-group horizontal class="selected-items mb-2">
                 <b-list-group-item class="selected-items align-items-start" variant="success" v-for="item in list"  button v-on:click="unselectItem(item)" ><ClothesClothCard :cloth="item"></ClothesClothCard></b-list-group-item>
             </b-list-group>
             <p>
-                Unselected:
+                Noch Verfügbar:
             </p>
             <b-list-group horizontal class="selected-items mb-2">
                 <b-list-group-item class="align-items-start" variant="warning" v-for="item in unselectedItems"  button v-on:click="selectItem(item)" ><ClothesClothCard :cloth="item"></ClothesClothCard></b-list-group-item>

@@ -5,7 +5,7 @@
       <ClothesAddForm class="mb-2" v-if="toggleAddForm"></ClothesAddForm>
 
       <b-row cols="1" cols-sm="2" cols-md="3" cols-lg="4">
-        <b-col v-for="cloth in filtedClothes">
+        <b-col v-for="cloth in filtedClothes" :key="cloth.id">
           <NuxtLink class="router-link" :to="`/clothes/${cloth.id}`">
             <ClothesClothCard class="mb-2" :cloth="cloth" :show-details="true" :show-footer="true"></ClothesClothCard>
           </NuxtLink>

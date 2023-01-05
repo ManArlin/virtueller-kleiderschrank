@@ -1,7 +1,7 @@
 <template>
     <b-container >
       <b-row cols="1" cols-sm="2" cols-md="3" cols-lg="4">
-        <b-col v-for="outfit in filtereddOutfits">
+        <b-col v-for="outfit in filtereddOutfits" :key="outfit.id">
           <NuxtLink class="router-link" :to="`/outfits/${outfit.id}`">
             <OutfitsOutfitCard class="mb-3" :outfit="outfit"></OutfitsOutfitCard>
           </NuxtLink>

@@ -1,16 +1,24 @@
 import { Size, ICloth, INewCloth} from "~/types/cloth"
 
-let id = 0;
+let id = 2;
 
 export default function useClothes() {
     const clothes = useState<ICloth[]>('clothes', () => [
         { 
-            id: 1, 
+            id: 0, 
             name: "Pullover mit schwarzem Muster", 
-            size: Size.XL, 
-            color: "blau",
+            size: Size.L, 
+            color: "weiß/schwarz",
             rating: "8", 
             categories: [ "Winter", "cozy" ]
+        },
+        { 
+            id: 1, 
+            name: "Jeanshose", 
+            size: Size.XL, 
+            color: "blau",
+            rating: "6", 
+            categories: [ "lockerer", "verwaschen" ]
         }
     ])
 
