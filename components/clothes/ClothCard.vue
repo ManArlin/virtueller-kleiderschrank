@@ -1,17 +1,17 @@
 <template>
     <div>
     <b-card v-if="cloth"
-        border-variant="secondary" :title="cloth.name"
-        :subtitle="cloth.categories.toString()" footer-tag="footer" align="center">
+    border-variant="secondary" :title="cloth.name"
+    :subtitle="cloth.categories.toString()" footer-tag="footer" align="center">
         <b-card-text>
-                Farbe: {{ cloth.color }}
-            </b-card-text>
-            <b-card-text>
-                Größe: {{ cloth.size }}
-            </b-card-text>
+            Farbe: {{ cloth.color }}
+        </b-card-text>
+        <b-card-text>
+            Größe: {{ cloth.size }}
+        </b-card-text>
       
       <template #footer>
-        <em>Bewertung: {{ cloth.color}}</em>
+        <em>Bewertung: {{ cloth.rating }}</em>
       </template>
     </b-card>
     </div>

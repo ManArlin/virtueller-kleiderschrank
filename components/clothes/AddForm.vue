@@ -11,7 +11,6 @@
                 <b-form-select id="select-size" v-model="form.size" :options="sizeOptions" required>
             </b-form-select>
             </b-form-group>
-            <strong>{{form.size}}</strong>
             <!--Color Field-->
             <b-form-group id="input-group-color" label="Farbe:" label-for="input-color">
                 <b-form-input id="input-color" v-model="form.color" type="text"
@@ -26,7 +25,7 @@
             
             <b-form-group id="input-group-categorie" label="Kategorien:" label-for="input-categorie">
                 <b-list-group horizontal class="mb-2">
-                    <b-list-group-item variant="warning" v-for="categorie in showAddedCategories">{{categorie}}</b-list-group-item>
+                    <b-list-group-item variant="warning" v-for="categorie in form.categories">{{categorie}}</b-list-group-item>
                 </b-list-group>
                 <b-row>
                     <b-col cols="8">
@@ -47,21 +46,19 @@
 </template>
 
 <script setup lang="ts">
-import {Size, ICloth} from "~/types/cloth"
+import {Size, INewCloth} from "~/types/cloth"
 
 const {clothes, addClothes} = useClothes()
 
-const showAddedCategories = ref<string[]>([])
-
-const form: ICloth= {
+const form = reactive<INewCloth>({
     name: "",
     size: Size.M,
     color: "",
     rating: 0,
-    categories: []
-}
-
+    categories: ([])
+})
 const newCategorie = ref("")
+
 
 function addCategorie() {
     if(newCategorie.value.trim().length <= 0) {
@@ -69,15 +66,11 @@ function addCategorie() {
         return
     }
     form.categories.push(newCategorie.value)
-
-    //Used to display the added Categories in the from. form.categories cant be reactive, because of the ICloth interface 
-    showAddedCategories.value.push(newCategorie.value)
     newCategorie.value = ""
 }
 
 function addCloth(event: Event) {
-    event.preventDefault()
-    addClothes(form)
+    addClothes(toRaw(form))
 }
 
 function formReset(event: Event) {
