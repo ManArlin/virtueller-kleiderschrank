@@ -7,7 +7,7 @@
                 placeholder="Gib den Namen deines Kleidungsstueck ein" required ></b-form-input>
             </b-form-group>
             <!--Size Select-->
-            <b-form-group id="select-group-size" label="Groesse:" label-for="select-size">
+            <b-form-group id="select-group-size" label="Größe:" label-for="select-size">
                 <b-form-select id="select-size" v-model="form.size" :options="sizeOptions" required>
             </b-form-select>
             </b-form-group>
@@ -64,10 +64,14 @@ const form: ICloth= {
 const newCategorie = ref("")
 
 function addCategorie() {
+    if(newCategorie.value.trim().length <= 0) {
+        //Text field ist empty, dont add a new empty Categorie
+        return
+    }
     form.categories.push(newCategorie.value)
+
     //Used to display the added Categories in the from. form.categories cant be reactive, because of the ICloth interface 
     showAddedCategories.value.push(newCategorie.value)
-    console.log(newCategorie.value)
     newCategorie.value = ""
 }
 

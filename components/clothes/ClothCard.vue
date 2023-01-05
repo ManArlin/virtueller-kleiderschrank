@@ -1,16 +1,19 @@
 <template>
     <div>
-        <b-card v-if="cloth"
-        border-variant="secondary"
-        :title="cloth.name"
-        :subtitle="cloth.categories.toString()"
-        align="center">
+    <b-card v-if="cloth"
+        border-variant="secondary" :title="cloth.name"
+        :subtitle="cloth.categories.toString()" footer-tag="footer" align="center">
         <b-card-text>
-            Some quick example text to build on the <em>card title</em> and make up the bulk of the card's
-            content.
-        </b-card-text>
-        </b-card>
-        
+                Farbe: {{ cloth.color }}
+            </b-card-text>
+            <b-card-text>
+                Größe: {{ cloth.size }}
+            </b-card-text>
+      
+      <template #footer>
+        <em>Bewertung: {{ cloth.color}}</em>
+      </template>
+    </b-card>
     </div>
 </template>
 
