@@ -34,7 +34,6 @@ export default function useClothes() {
             categories: newCloth.categories
         }
         clothes.value = [...clothes.value, cloth]
-        console.log("clothes: ", clothes.value)
     }
 
     //Returns the Cloth to the passed id
@@ -51,6 +50,7 @@ export default function useClothes() {
     }
 
     return {
-        clothes, addCloth, getClothById, deleteCloth
+       clothes: readonly(clothes), 
+       addCloth, getClothById, deleteCloth
     }
 }

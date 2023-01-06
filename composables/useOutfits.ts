@@ -16,7 +16,6 @@ export default function useOutfits() {
             occasion: newOutfit.occasion
         }
         outfits.value = [...outfits.value, outfit]
-        console.log("Outfits: ", outfits.value)
     }
 
     //Returns the Outfit to the passed id
@@ -33,6 +32,6 @@ export default function useOutfits() {
     }
 
     return {
-        outfits, addOutfit, getOutfitById, deleteOutfit
+        outfits: readonly(outfits), addOutfit, getOutfitById, deleteOutfit
     }
 }
