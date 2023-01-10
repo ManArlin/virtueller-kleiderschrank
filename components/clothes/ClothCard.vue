@@ -18,12 +18,12 @@
 </template>
 
 <script setup lang="ts">
-import { PropType } from 'vue'
+import { PropType, DeepReadonly } from 'vue'
 import { ICloth } from '~~/types/cloth';
 
 //showDetails and showFooter to determine if detailed information should be displayed
 const {cloth, showDetails, showFooter} = defineProps({
-    cloth: Object as PropType<ICloth>,
+    cloth: Object as PropType<DeepReadonly<ICloth>>,
     showDetails: Boolean,
     showFooter: Boolean
 })

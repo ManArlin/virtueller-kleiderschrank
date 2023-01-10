@@ -19,14 +19,14 @@
 </template>
 
 <script setup lang="ts">
-import { PropType } from 'vue';
+import { PropType, DeepReadonly } from 'vue';
 import { ICloth } from '~~/types/cloth';
 
 const {clothes} = useClothes();
 
 let {listName, list} = defineProps({
     listName: {type:String, required: true},
-    list: {type: Object as PropType<ICloth[]>, required: true},
+    list: {type: Object as PropType<DeepReadonly<ICloth[]>>, required: true},
 })
 
 

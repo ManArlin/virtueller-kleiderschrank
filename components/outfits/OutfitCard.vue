@@ -19,10 +19,10 @@
 </template>
 
 <script setup lang="ts">
-import { PropType } from 'vue'
+import { PropType, DeepReadonly } from 'vue'
 import { IOutfit } from '~~/types/outfit';
 
 const props = defineProps({
-    outfit: Object as PropType<IOutfit>
+    outfit: Object as PropType<DeepReadonly<IOutfit>>
 })
 </script>

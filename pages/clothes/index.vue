@@ -29,30 +29,23 @@ const {clothes} = useClothes()
 let toggleAddForm = ref(false);
 
 //filters the Clothes depending on the searchInput
-const filtedClothes = computed(() => clothes.value.filter((cloth: ICloth) => {
+const filtedClothes = computed(() => clothes.value.filter((cloth) => {
+  const searchInputLowerCase = searchInput.value.toLowerCase();
+
   //Check Name
-  if(cloth.name.toLowerCase().includes(searchInput.value.toLowerCase())){
+  if(cloth.name.toLowerCase().includes(searchInputLowerCase)){
     return true
   }
   //Check Color
-  if(cloth.color.toLowerCase().includes(searchInput.value.toLowerCase())) {
+  if(cloth.color.toLowerCase().includes(searchInputLowerCase)) {
     return true
   }
   //Check Size
-  if(cloth.size.includes(searchInput.value)){
+  if(cloth.size.includes(searchInputLowerCase)){
     return true
   }
-
-  //Check Categories
-  for(let index = 0; index < cloth.categories.length; index++) {
-    if(cloth.categories[index].toLowerCase().includes(searchInput.value.toLowerCase())) {
-      console.log("Include Categorie");
-      return true
-    }
-  }
-
-  //No Match found
-  return false
+  //Check Categories if no Categorie found returns false for the Methode
+  return Array.prototype.some(cloth.categories, (categorie: String) => {categorie.toLowerCase().includes(searchInputLowerCase)})
 }))
 </script>
 

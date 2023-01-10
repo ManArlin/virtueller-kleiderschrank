@@ -31,21 +31,16 @@ let toggleAddForm = ref(false);
 //filters the Outftits depending on the searchInput
 //Maybe add Check for searchInput matching with text from the clothes?
 //Maybe it is possible to reuse the filteredClothes method in the other File 
-const filteredOutfits = computed(() => outfits.value.filter((outfit: IOutfit) => {
+const filteredOutfits = computed(() => outfits.value.filter((outfit) => {
+  const searchInputLowerCase = searchInput.value.toLowerCase();
+
   //Check Name
-  if(outfit.name.toLowerCase().includes(searchInput.value.toLowerCase())){
+  if(outfit.name.toLowerCase().includes(searchInputLowerCase)){
     return true
   }
-  //Check Categories
-  for(let index = 0; index < outfit.occasion.length; index++) {
-    if(outfit.occasion[index].toLowerCase().includes(searchInput.value.toLowerCase())) {
-      console.log("Include Categorie");
-      return true
-    }
-  }
-  //No Match found
-  return false
-}))
+  //Check Categories if no Categorie found returns false for the Methode
+  return Array.prototype.some(outfit.occasion, (occasion: String) => occasion.toLowerCase().includes(searchInputLowerCase));
+}));
 
 </script>
 
