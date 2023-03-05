@@ -1,0 +1,1 @@
+import{d as a,o as e,n as r,c as t,M as n}from"./entry.08d5f432.js";const s={role:"presentation"},p=a({__name:"BDropdownDivider",props:{tag:{default:"hr"}},setup(o){return(i,c)=>(e(),r("li",s,[(e(),t(n(o.tag),{class:"dropdown-divider",role:"separator","aria-orientation":"horizontal"}))]))}});export{p as default};

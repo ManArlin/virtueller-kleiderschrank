@@ -1,0 +1,1 @@
+import{d as o,o as s,n as a,a as n,K as r,e as p,t as c}from"./entry.08d5f432.js";const d={role:"presentation"},l={class:"px-4 py-1 mb-0 text-muted"},m=o({__name:"BDropdownText",props:{text:{default:""}},setup(e){return(t,i)=>(s(),a("li",d,[n("p",l,[r(t.$slots,"default",{},()=>[p(c(e.text),1)])])]))}});export{m as default};

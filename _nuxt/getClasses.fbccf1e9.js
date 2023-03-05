@@ -1,0 +1,1 @@
+const u=(t,l,c)=>l.concat(["sm","md","lg","xl","xxl"]).reduce((s,e)=>(s[t?`${t}${e.charAt(0).toUpperCase()+e.slice(1)}`:e]=c,s),Object.create(null)),o=(t,l,c,s=c)=>Object.keys(l).reduce((e,a)=>(t[a]&&e.push([s,a.replace(c,""),t[a]].filter(n=>n&&typeof n!="boolean").join("-").toLowerCase()),e),[]);export{o as a,u as g};
