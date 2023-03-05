@@ -1,0 +1,1 @@
+import{g as o,o as s,n as t,a as r,K as n}from"./entry.08d5f432.js";const a={},c={role:"presentation"},_={class:"px-4 py-3"};function l(e,d){return s(),t("li",c,[r("form",_,[n(e.$slots,"default")])])}const p=o(a,[["render",l]]);export{p as default};

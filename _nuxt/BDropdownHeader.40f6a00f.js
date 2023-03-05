@@ -1,1 +1,0 @@
-import{g as o,o as r,n as s,a,K as n}from"./entry.662d088a.js";const t={},c={class:"dropdown-header"};function d(e,l){return r(),s("li",null,[a("h6",c,[n(e.$slots,"default")])])}const f=o(t,[["render",d]]);export{f as default};

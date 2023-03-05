@@ -1,1 +1,0 @@
-import"./BCardFooter.vue_vue_type_script_setup_true_lang.c8d35bc0.js";import{_ as i}from"./BCardFooter.vue_vue_type_script_setup_true_lang.c8d35bc0.js";import"./BCardHeadFoot.vue_vue_type_script_setup_true_lang.dd8a211a.js";import"./entry.662d088a.js";export{i as default};

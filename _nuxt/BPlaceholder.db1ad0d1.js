@@ -1,1 +1,0 @@
-import"./BPlaceholder.vue_vue_type_script_setup_true_lang.03772a1d.js";import{_ as t}from"./BPlaceholder.vue_vue_type_script_setup_true_lang.03772a1d.js";import"./entry.662d088a.js";export{t as default};

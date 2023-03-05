@@ -1,0 +1,1 @@
+import{d as a,o as s,n as o,K as n,e as r,t as l}from"./entry.08d5f432.js";const c={class:"navbar-text"},i=a({__name:"BNavText",props:{text:null},setup(e){return(t,p)=>(s(),o("li",c,[n(t.$slots,"default",{},()=>[r(l(e.text),1)])]))}});export{i as default};

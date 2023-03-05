@@ -1,0 +1,1 @@
+import"./BPlaceholderButton.vue_vue_type_script_setup_true_lang.313ba36d.js";import{_ as i}from"./BPlaceholderButton.vue_vue_type_script_setup_true_lang.313ba36d.js";import"./BPlaceholder.vue_vue_type_script_setup_true_lang.f36e98ed.js";import"./entry.08d5f432.js";export{i as default};

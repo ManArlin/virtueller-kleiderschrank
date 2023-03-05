@@ -1,0 +1,1 @@
+import"./BAvatar.vue_vue_type_script_setup_true_lang.acd07343.js";import{a as s,i as n}from"./BAvatar.vue_vue_type_script_setup_true_lang.acd07343.js";import"./dom.ed296b52.js";import"./entry.08d5f432.js";import"./number.a61965f3.js";import"./useBooleanish.b579a75e.js";import"./useBreadcrumb.ba721e02.js";export{s as default,n as injectionKey};

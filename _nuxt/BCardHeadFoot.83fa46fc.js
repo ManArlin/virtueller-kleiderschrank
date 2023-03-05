@@ -1,1 +1,0 @@
-import"./BCardHeadFoot.vue_vue_type_script_setup_true_lang.dd8a211a.js";import{_ as t}from"./BCardHeadFoot.vue_vue_type_script_setup_true_lang.dd8a211a.js";import"./entry.662d088a.js";export{t as default};

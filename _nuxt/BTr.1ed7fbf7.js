@@ -1,0 +1,1 @@
+import{d as t,j as r,o as n,n as l,K as c,s as p,u}from"./entry.08d5f432.js";const i=t({__name:"BTr",props:{variant:null},setup(e){const a=e,s=r(()=>({[`table-${a.variant}`]:a.variant!==void 0}));return(o,m)=>(n(),l("tr",{role:"row",class:p(u(s))},[c(o.$slots,"default")],2))}});export{i as default};

@@ -1,1 +1,0 @@
-import"./BAvatar.vue_vue_type_script_setup_true_lang.9d70b504.js";import{c as s,_}from"./BAvatar.vue_vue_type_script_setup_true_lang.9d70b504.js";import"./dom.08632105.js";import"./entry.662d088a.js";import"./number.a61965f3.js";import"./useBooleanish.b2afd79a.js";import"./useBreadcrumb.ef185003.js";export{s as computeSize,_ as default};
