@@ -1,1 +1,0 @@
-import{d as o,o as t,c as s,w as r,M as n,K as l}from"./entry.08d5f432.js";const d=o({__name:"BFormRow",props:{tag:{default:"div"}},setup(e){return(a,c)=>(t(),s(n(e.tag),{class:"row d-flex flex-wrap"},{default:r(()=>[l(a.$slots,"default")]),_:3}))}});export{d as _};

@@ -1,1 +1,0 @@
-import{l as v,Q as a}from"./entry.08d5f432.js";const d=(o,s,u)=>{v(()=>{var r;(r=o==null?void 0:o.value)==null||r.addEventListener(s,u)}),a(()=>{var r;(r=o==null?void 0:o.value)==null||r.removeEventListener(s,u)})};export{d as u};

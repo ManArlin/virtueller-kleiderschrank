@@ -1,0 +1,1 @@
+import"./BCardHeader.vue_vue_type_script_setup_true_lang.a299beb6.js";import{_ as i}from"./BCardHeader.vue_vue_type_script_setup_true_lang.a299beb6.js";import"./BCardHeadFoot.vue_vue_type_script_setup_true_lang.dd8a211a.js";import"./entry.662d088a.js";export{i as default};

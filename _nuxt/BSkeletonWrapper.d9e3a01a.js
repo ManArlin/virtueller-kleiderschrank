@@ -1,0 +1,1 @@
+import{u as n}from"./useBooleanish.b2afd79a.js";import"./useBreadcrumb.ef185003.js";import"./dom.08632105.js";import{d as r,v as t,u as p,K as e}from"./entry.662d088a.js";const c=r({__name:"BSkeletonWrapper",props:{loading:{default:!1}},setup(s){const a=n(t(s,"loading"));return(o,i)=>p(a)?e(o.$slots,"loading",{key:0}):e(o.$slots,"default",{key:1})}});export{c as default};

@@ -1,0 +1,1 @@
+import{d as t,j as n,o as r,n as l,K as c,s as p,u}from"./entry.662d088a.js";const f=t({__name:"BTfoot",props:{variant:null},setup(a){const o=a,e=n(()=>({[`table-${o.variant}`]:o.variant!==void 0}));return(s,m)=>(r(),l("tfoot",{role:"rowgroup",class:p(u(e))},[c(s.$slots,"default")],2))}});export{f as default};
